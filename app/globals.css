@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #0a0e1a;
+  --color-navy-900: #0f1629;
+  --color-navy-800: #1a2240;
+  --color-navy-700: #243056;
+  --color-navy-600: #2e3e6c;
+  --color-steel-400: #8a94a8;
+  --color-steel-300: #a8b0c0;
+  --color-steel-200: #c5cbd8;
+  --color-steel-100: #e2e5ec;
+  --color-steel-50: #f0f2f5;
+  --color-accent: #4a7cff;
+  --color-accent-light: #6b93ff;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-navy-950);
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s ease-out forwards;
+}
+
+.animate-fade-in-up-delay {
+  animation: fade-in-up 0.7s ease-out 0.15s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up-delay-2 {
+  animation: fade-in-up 0.7s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(74, 124, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 124, 255, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
